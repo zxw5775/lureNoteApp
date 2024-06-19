@@ -1,0 +1,145 @@
+@import "common/mixins.scss";
+:root, page {
+	--background-color: #28272C;
+	--color-primary: #4F9F60;
+	--color-white: #FFFFFF;
+	--color-black: #000000;
+}
+
+
+// flex
+.flex {
+  display: flex;
+}
+
+.flex.flex-column {
+  flex-direction: column;
+}
+.flex.space-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1;
+}
+.grow{
+  flex-grow:1;
+}
+.flex-center {
+  align-items: center;
+}
+.flex-end {
+  align-items: end;
+}
+
+.flex-content-center {
+  justify-content: center;
+}
+
+.shrink {
+  flex-shrink: 0;
+}
+
+// float
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+// text
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-white {
+  color: var(--color-white) !important;
+}
+
+.text-black {
+  color: var(--color-black) !important;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+
+// font
+.font-size-32 {
+  font-size: 32px !important;
+}
+
+.font-size-24 {
+  font-size: 24px !important;
+}
+
+.font-size-22 {
+  font-size: 22px !important;
+}
+
+.font-size-20 {
+  font-size: 20px !important;
+}
+
+.font-size-18 {
+  font-size: 18px !important;
+}
+
+.font-size-16 {
+  font-size: 16px !important;
+}
+
+.font-size-14 {
+  font-size: 14px !important;
+}
+
+.font-size-12 {
+  font-size: 12px !important;
+}
+
+/*
+Margin Padding PX by zxw5775
+*/
+@for $i from 0 through 10 {
+  $num: $i * 8;
+  @include margin-padding(margin, 4);
+  @include margin-padding(padding, 4);
+  @include margin-padding(margin, $num);
+  @include margin-padding(padding, $num);
+}
